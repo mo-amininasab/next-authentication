@@ -23,7 +23,8 @@ const handler = async (req, res) => {
     try {
       client = await connectToDB();
     } catch (error) {
-      console.log('Can not connect to data base');
+      client.close();
+      throw new Error('Can not connect to data base');
     }
 
     const db = client.db();
