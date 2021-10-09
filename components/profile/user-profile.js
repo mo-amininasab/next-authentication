@@ -14,6 +14,7 @@ function UserProfile() {
   // useEffect(() => {
   //   getSession().then((session) => {
   //     if (!session) {
+  //       // resets entire application
   //       window.location.href = '/auth';
   //     } else {
   //       setIsLoading(false);
